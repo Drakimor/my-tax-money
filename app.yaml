@@ -1,0 +1,27 @@
+application: my-tax
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon\.ico
+
+- url: /css
+  static_dir: static/css
+
+- url: /js
+  static_dir: static/js
+
+- url: /images
+  static_dir: static/images
+
+- url: /.*
+  script: mytax.app
+
+libraries:
+- name: jinja2
+  version: latest

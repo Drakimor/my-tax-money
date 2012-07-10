@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>{{ title }}</title>
+		<link rel="stylesheet" href="/css/main.css">
+		<script type="text/javascript" src="/js/google.js"></script>
+		<script type="text/javascript" src="/js/facebook.js"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="/js/chart.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<body>
+		<div id="fb-root"></div>
+<!--		<div id="header"><div class="nav">
+			<ul class="nav">
+				<li><a href="#">Blah blah</a></li>
+			</ul>
+		</div></div>
+-->
+		<h1 align="center">Welcome to "What did I pay for?"</h1>
+		<table width="80%" align="center">
+			<tr>
+				<td align="center" width="600px">
+					<div id="taxchart" style="width: 600px; height: 400px;"></div>
+				</td>
+				<td align="center" valign="top">
+					<br /><br />
+					<p>Amount you were taxed by the fed:</p>
+					<input type="text" id="income" />
+					<button type="button" onclick="drawVisualization()">
+						Calculate</button>
+				</td>
+			</tr>
+		</table>
+		<br/><br/><br/>
+		<g:plusone annotation="inline"></g:plusone>
+		<div class="fb-like" data-href="http://tools.cyber-dragon.net" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-action="recommend">
+		</div>
+		<br/><br/><br/>
+		<p align = "center">
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+		</p>
+	</body>
+</html>
