@@ -19,19 +19,3 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 app = webapp2.WSGIApplication([('/', MainPage)],
 	debug=False)
-
-# def get(self):
-# 	logging.debug("Started Main Page")
-# 	user = users.get_current_user()		
-
-# 	logging.debug("Sent Content")
-
-# 	if user:
-# 		# self.response.headers['Content-Type'] = 'text/html'			
-# 		# self.response.out.write("Heya, %s!"% user.nickname())
-# 		template_values = {'user': user.nickname(),
-# 							'title': "Test App"}
-# 		template = jinja_environment.get_template('index.html')
-# 		self.response.out.write(template.render(template_values))
-# 	else:
-# 		self.redirect(users.create_login_url(self.request.uri))
