@@ -1,5 +1,6 @@
 google.load('visualization', '1', {packages: ['corechart']});
 
+// Hard coded until datastore is running
 gov_spending = {
 	'Pensions': 780.8,
 	'Health Care': 898.0,
@@ -13,11 +14,17 @@ gov_spending = {
 	'Interest': 250.7,
 }
 
+// Hard coded until datastore is running
 gov_budget = {
 	'Income': 2567.2,
 	'Deficit': 1266.7
 }
 
+/* 
+Turns the spending array into something consumable by Google Charts, adds title
+This should be updated to the recommended format of initializing array with title
+and then adding the rows.
+*/
 function getSpendingArray() {
 	var income_field = document.getElementById('income');
 	var spending_total = 0;
@@ -43,10 +50,12 @@ function getSpendingArray() {
 	return array
 }
 
+// Draw the chart
 function drawVisualization() {
 	// Create and populate the data table.
 	var data = google.visualization.arrayToDataTable(getSpendingArray());
 
+	// Set options for the chart
 	var options = {
 		title: "Tax money went to: (in billions)",
 		is3D: true,
@@ -56,6 +65,7 @@ function drawVisualization() {
 		pieSliceText: "value"
 	}
 
+	// Change title once tax amount inputted
 	if (document.getElementById('income').value != "") {
 		options['title'] = "Your money went to:"
 	}
@@ -65,5 +75,5 @@ function drawVisualization() {
 	    draw(data, options);
 }
 
-
+// Draw the chart once page loads
 google.setOnLoadCallback(drawVisualization);
